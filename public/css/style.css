@@ -5,33 +5,20 @@
 }
 
 :root {
-  /* --- THEME COLORS (Network Engineer Dark Mode) --- */
-  
-  /* Terminal Green (The main "Hacker/Pro" color) */
   --primary: #00ff9d; 
-  
-  /* darker teal/green for gradients */
   --secondary: #00b894; 
-  
-  /* Warning/Alert Orange (Like router status lights) */
   --accent: #ffb142; 
-  
-  /* MAIN BACKGROUND: Very deep charcoal (Almost black) */
   --dark: #0f172a; 
-  
-  /* CARD BACKGROUND: Slightly lighter than main bg */
   --card-bg: #1e293b; 
-  
-  /* Text Colors */
-  --text: #e2e8f0;      /* Bright white-grey for reading */
-  --text-muted: #94a3b8; /* Dim grey for descriptions */
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
 }
 
 body {
   font-family: 'Fira Code', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Fira Code is great for IT portfolios */
   line-height: 1.6;
   color: var(--text);
-  background: var(--dark); /* Changed to Dark */
+  background: var(--dark);
 }
 
 .container {
@@ -48,7 +35,7 @@ section {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
-  color: var(--primary); /* Title is now Green */
+  color: var(--primary); 
 }
 
 .gradient-text {
@@ -58,16 +45,15 @@ section {
   background-clip: text;
 }
 
-/* --- NAVBAR (Dark Mode) --- */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(15, 23, 42, 0.95); /* Matches dark bg */
+  background: rgba(15, 23, 42, 0.95); 
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
   z-index: 1000;
-  border-bottom: 1px solid rgba(0, 255, 157, 0.1); /* Subtle green line */
+  border-bottom: 1px solid rgba(0, 255, 157, 0.1);
 }
 
 .navbar .container {
@@ -81,7 +67,7 @@ section {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--primary);
-  font-family: 'Fira Code', monospace; /* Looks like code */
+  font-family: 'Fira Code', monospace; 
 }
 
 .nav-menu {
@@ -115,19 +101,16 @@ section {
   transition: 0.3s;
 }
 
-/* --- HERO SECTION (Green Gradient) --- */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  /* Dark Green to Deep Blue Gradient */
   background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%);
   position: relative;
   overflow: hidden;
   padding-top: 80px;
 }
 
-/* Optional: Add a subtle grid overlay for "Tech" vibe */
 .hero::before {
     content: "";
     position: absolute;
@@ -177,7 +160,7 @@ section {
 
 .btn {
   padding: 12px 30px;
-  border-radius: 5px; /* Boxier buttons look more techy */
+  border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s;
@@ -187,12 +170,12 @@ section {
 
 .btn-primary {
   background: var(--primary);
-  color: var(--dark); /* Black text on Green button */
+  color: var(--dark);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(0, 255, 157, 0.4); /* Glowing Effect */
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.4); 
 }
 
 .btn-secondary {
@@ -223,7 +206,6 @@ section {
   transform: translateY(-3px);
 }
 
-/* --- SECTIONS (Cards updated to Dark Mode) --- */
 .about {
   background: var(--dark);
 }
@@ -236,7 +218,7 @@ section {
 }
 
 .skills {
-  background: var(--dark); /* Keep uniform background */
+  background: var(--dark); 
 }
 
 .skills-grid {
@@ -246,17 +228,17 @@ section {
 }
 
 .skill-card {
-  background: var(--card-bg); /* Dark Grey Card */
+  background: var(--card-bg);
   padding: 40px;
   border-radius: 10px;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.05); /* Subtle border */
+  border: 1px solid rgba(255,255,255,0.05);
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
-  border-color: var(--primary); /* Green border on hover */
+  border-color: var(--primary); 
   box-shadow: 0 10px 30px rgba(0, 255, 157, 0.1);
 }
 
@@ -286,7 +268,7 @@ section {
 }
 
 .project-card {
-  background: var(--card-bg); /* Dark Grey Card */
+  background: var(--card-bg); 
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -304,7 +286,7 @@ section {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  opacity: 0.8; /* Slight dim, brightens on hover */
+  opacity: 0.8; 
   transition: 0.3s;
 }
 
@@ -334,7 +316,7 @@ section {
 }
 
 .project-tags span {
-  background: rgba(0, 255, 157, 0.1); /* Low opacity green bg */
+  background: rgba(0, 255, 157, 0.1); 
   padding: 5px 15px;
   border-radius: 5px;
   font-size: 0.85rem;
@@ -350,7 +332,7 @@ section {
 .form-group textarea {
   width: 100%;
   padding: 15px;
-  background: var(--card-bg); /* Dark Input */
+  background: var(--card-bg);
   border: 1px solid rgba(255,255,255,0.1);
   color: white;
   border-radius: 8px;
@@ -366,7 +348,7 @@ section {
 }
 
 .footer {
-  background: #000; /* Pure black footer */
+  background: #000;
   color: var(--text-muted);
   text-align: center;
   padding: 30px 0;
