@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Pert Millena - Backend Developer & Aspiring Network Engineer</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ 
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">~/johnpert<span class="gradient-text">_admin</span></div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">System</a></li> <li><a href="#about" class="nav-link">Bio</a></li>   <li><a href="#skills" class="nav-link">Stack</a></li> <li><a href="#projects" class="nav-link">Labs</a></li> <li><a href="#contact" class="nav-link">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <br>
+        <p style="color: var(--primary); font-family: 'Fira Code', monospace; margin-bottom: 10px;">> initializing connection...</p>
+        <h1 class="hero-title">John Pert <span class="gradient-text">Millena</span></h1>
+        <h2 class="hero-subtitle">Backend Developer & Aspiring Network Engineer</h2>
+        <p class="hero-description">
+          Bridging the gap between <strong>Software Logic</strong> and <strong>Network Infrastructure</strong>. 
+          I build scalable APIs, configure networks using tools, and automate workflows using Node.js, Python, and Linux.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary"><i class="fas fa-terminal"></i> View Labs</a>
+          <a href="#contact" class="btn btn-secondary">Ping Me</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/JohnP3rt" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/johnpertmillena" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">System Status</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I am a graduating IT student (Aug 2026) pivoting from general development to <strong>Infrastructure and Backend Development</strong>. While I have a background in Full Stack development, my passion lies in what happens "under the hood"—how servers talk, how data moves, and how to secure it.</p>
+          <p>Currently, I am focused on mastering <strong>Cisco Networking (CCNA path)</strong> and <strong>Linux Administration</strong>. I use my coding skills (Node.js/Python) to build apps, and to write scripts that automate technical support tasks and network configurations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Protocols</h2>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <i class="fas fa-network-wired skill-icon"></i>
+          <h3>Infrastructure & NetOps</h3>
+          <p>Cisco Packet Tracer, VLANs, OSPF Routing, TCP/IP, Subnetting, DHCP/DNS Config</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-linux skill-icon"></i>
+          <h3>System Admin</h3>
+          <p>Linux (Ubuntu), Bash Scripting, User Management, Cron Jobs, Git Version Control</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-node-js skill-icon"></i>
+          <h3>Backend Development</h3>
+          <p>Node.js, Express.js, REST APIs, Python, ASP.NET Core, MVC Architecture</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-database skill-icon"></i>
+          <h3>Data Management</h3>
+          <p>MongoDB (NoSQL), MySQL, Raw SQL Queries, Database Normalization</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-mobile-alt skill-icon"></i>
+          <h3>Client Integration</h3>
+          <p>Flutter/Dart, API Consumption, JSON Parsing, Mobile UI Integration</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-terminal skill-icon"></i>
+          <h3>Tools & Utils</h3>
+          <p>VS Code, Postman (API Testing), XAMPP, Android Debugging (ADB)</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Deployed Systems & Labs</h2>
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/600x400/0f172a/00ff9d?text=Enterprise+Topology" alt="Network Topology">
+          </div>
+          <div class="project-content">
+            <h3>Enterprise Network Simulation</h3>
+            <p>Designed a multi-VLAN network topology for a corporate office simulation. Configured OSPF routing, ACL security policies, and DHCP servers using Cisco Packet Tracer.</p>
+            <div class="project-tags">
+              <span>Cisco IOS</span>
+              <span>Packet Tracer</span>
+              <span>VLANs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/600x400/0f172a/00ff9d?text=Litewritten+Backend" alt="Litewritten">
+          </div>
+          <div class="project-content">
+            <h3>Litewritten (Backend Architecture)</h3>
+            <p>Architected the Node.js/Express backend for an AI storytelling platform. Managed MongoDB schemas for user data and integrated OpenAI's API for dynamic text generation.</p>
+            <div class="project-tags">
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>REST API</span>
+              <span>AI Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/600x400/0f172a/00ff9d?text=SQL+System" alt="Estate System">
+          </div>
+          <div class="project-content">
+            <h3>Real Estate DBMS</h3>
+            <p>A property management system utilizing <strong>Raw SQL</strong> for optimized CRUD operations. Focused on database efficiency and relational data integrity.</p>
+            <div class="project-tags">
+              <span>Raw SQL</span>
+              <span>PHP/Laravel</span>
+              <span>Database Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/600x400/0f172a/00ff9d?text=API+Integration" alt="Weather API">
+          </div>
+          <div class="project-content">
+            <h3>Weather Data Integration</h3>
+            <p>A mobile implementation demonstrating third-party API consumption. Fetches, parses, and displays complex JSON data from OpenWeatherMap using asynchronous logic.</p>
+            <div class="project-tags">
+              <span>API Consumption</span>
+              <span>JSON</span>
+              <span>Asynchronous Prog</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Initialize Connection</h2>
+      <div class="contact-content">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="User Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="5" placeholder="Command / Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Execute Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>System Status: Online | &copy; 2025 John Pert Millena</p>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --- THEME COLORS (Network Engineer Dark Mode) --- */
+  
+  /* Terminal Green (The main "Hacker/Pro" color) */
+  --primary: #00ff9d; 
+  
+  /* darker teal/green for gradients */
+  --secondary: #00b894; 
+  
+  /* Warning/Alert Orange (Like router status lights) */
+  --accent: #ffb142; 
+  
+  /* MAIN BACKGROUND: Very deep charcoal (Almost black) */
+  --dark: #0f172a; 
+  
+  /* CARD BACKGROUND: Slightly lighter than main bg */
+  --card-bg: #1e293b; 
+  
+  /* Text Colors */
+  --text: #e2e8f0;      /* Bright white-grey for reading */
+  --text-muted: #94a3b8; /* Dim grey for descriptions */
+}
+
+body {
+  font-family: 'Fira Code', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Fira Code is great for IT portfolios */
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--dark); /* Changed to Dark */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: var(--primary); /* Title is now Green */
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- NAVBAR (Dark Mode) --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.95); /* Matches dark bg */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 255, 157, 0.1); /* Subtle green line */
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  font-family: 'Fira Code', monospace; /* Looks like code */
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* --- HERO SECTION (Green Gradient) --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* Dark Green to Deep Blue Gradient */
+  background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%);
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+/* Optional: Add a subtle grid overlay for "Tech" vibe */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 255, 157, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 157, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: white;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: var(--text-muted);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 5px; /* Boxier buttons look more techy */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--dark); /* Black text on Green button */
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.4); /* Glowing Effect */
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 255, 157, 0.1);
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+.social-links a {
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* --- SECTIONS (Cards updated to Dark Mode) --- */
+.about {
+  background: var(--dark);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.skills {
+  background: var(--dark); /* Keep uniform background */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: var(--card-bg); /* Dark Grey Card */
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.05); /* Subtle border */
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary); /* Green border on hover */
+  box-shadow: 0 10px 30px rgba(0, 255, 157, 0.1);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.skill-card h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.skill-card p {
+  color: var(--text-muted);
+}
+
+.projects {
+  background: var(--dark);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background: var(--card-bg); /* Dark Grey Card */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  border-color: var(--primary);
+}
+
+.project-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  opacity: 0.8; /* Slight dim, brightens on hover */
+  transition: 0.3s;
+}
+
+.project-card:hover .project-image img {
+  opacity: 1;
+}
+
+.project-content {
+  padding: 30px;
+}
+
+.project-content h3 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.project-content p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.project-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.project-tags span {
+  background: rgba(0, 255, 157, 0.1); /* Low opacity green bg */
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  color: var(--primary);
+  border: 1px solid rgba(0, 255, 157, 0.2);
+}
+
+.contact {
+  background: var(--dark);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  background: var(--card-bg); /* Dark Input */
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(0, 255, 157, 0.05);
+}
+
+.footer {
+  background: #000; /* Pure black footer */
+  color: var(--text-muted);
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: var(--card-bg);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.5);
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
